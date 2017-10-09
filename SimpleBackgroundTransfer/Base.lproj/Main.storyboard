@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="JbH-Fy-SsE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="APLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GFg-Ws-Iic"/>
+                        <viewControllerLayoutGuide type="bottom" id="kgM-gA-0tS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBM-JO-NGg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="362"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOj-xX-8rE">
+                                <rect key="frame" x="0.0" y="382" width="375" height="221"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eo0-TR-uhL" userLabel="ProgressViews">
+                                <rect key="frame" x="0.0" y="362" width="375" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="shs-rR-7sM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OBM-JO-NGg" firstAttribute="top" secondItem="GFg-Ws-Iic" secondAttribute="bottom" id="9qL-Re-pBT"/>
+                            <constraint firstItem="Eo0-TR-uhL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="BJM-a6-Uvr"/>
+                            <constraint firstAttribute="trailing" secondItem="Eo0-TR-uhL" secondAttribute="trailing" id="CdB-CP-qEO"/>
+                            <constraint firstItem="OBM-JO-NGg" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.6" id="FNd-T8-vL6"/>
+                            <constraint firstItem="Eo0-TR-uhL" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Q4X-fA-PiW"/>
+                            <constraint firstAttribute="trailing" secondItem="cOj-xX-8rE" secondAttribute="trailing" id="R7W-Vc-bgB"/>
+                            <constraint firstItem="cOj-xX-8rE" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="agq-1e-53b"/>
+                            <constraint firstItem="OBM-JO-NGg" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="b40-Az-imW"/>
+                            <constraint firstItem="cOj-xX-8rE" firstAttribute="top" secondItem="Eo0-TR-uhL" secondAttribute="bottom" id="eAc-cu-JIg"/>
+                            <constraint firstItem="OBM-JO-NGg" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="em4-nt-QDY"/>
+                            <constraint firstItem="Eo0-TR-uhL" firstAttribute="top" secondItem="OBM-JO-NGg" secondAttribute="bottom" id="gTp-Kg-Ykr"/>
+                            <constraint firstItem="cOj-xX-8rE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="hMZ-hv-Iud"/>
+                            <constraint firstItem="kgM-gA-0tS" firstAttribute="top" secondItem="cOj-xX-8rE" secondAttribute="bottom" id="mmA-k0-OsS"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="v3f-Zg-lNA">
+                        <barButtonItem key="rightBarButtonItem" title="Start" id="fhz-nI-jS4">
+                            <connections>
+                                <action selector="start:" destination="vXZ-lx-hvc" id="ObZ-bx-23q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loggerView" destination="cOj-xX-8rE" id="Wha-tT-m3h"/>
+                        <outlet property="progressBarsView" destination="Eo0-TR-uhL" id="Tkm-vy-abI"/>
+                        <outlet property="videoPlayerView" destination="OBM-JO-NGg" id="tpP-8K-HVe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358.5" y="-289.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H82-nK-AbP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JbH-Fy-SsE" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sIz-me-aLz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="yJq-V9-KdY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bpn-19-0HH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107" y="-289"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
